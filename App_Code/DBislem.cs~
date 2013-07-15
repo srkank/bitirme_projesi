@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data;
+using System.Data.OleDb;
+
+/// <summary>
+/// Summary description for DBislem
+/// </summary>
+public static class DBislem
+{
+//    public static OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + HttpContext.Current.Server.MapPath(@"\App_Data\db.mdb") + ";Persist Security Info=True");
+		public static string connetionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=yourdatabasename.mdb;";
+    public static OleDbCommand cmdd = new OleDbCommand(connection);
+
+    public static string BilgiGonder()
+    {
+        string sonuc = "işleminiz gerçekleştirildi.";
+
+
+        cmdd.Connection = baglanti;
+        if (baglanti.State == ConnectionState.Open)
+            baglanti.Close();
+        try
+        {
+            baglanti.Open();
+            cmdd.ExecuteNonQuery();
+            baglanti.Close();
+        }
+        catch (Exception ex)
+        {
+            sonuc = "hata : " + ex.Message;
+        }
+       
+        return sonuc;
+    }
+
+    public static string BilgiAl()
+    {
+        string sonuc = "işleminiz gerçekleştirildi.";
+
+        cmdd.Connection = baglanti;
+        if (baglanti.State == ConnectionState.Open)
+            baglanti.Close();
+        try
+        {
+            baglanti.Open();
+            cmdd.CommandText = "select * from sepet";
+            OleDbDataReader queryReader = cmdd.ExecuteReader();
+            queryReader.Read();
+            Console.Write(queryReader["URUN"].ToString());
+            baglanti.Close();
+        }
+        catch (Exception ex)
+        {
+            sonuc = "hata : " + ex.Message;
+        }
+
+
+        return sonuc;
+    }
+
+    public static DataTable dtGetir(OleDbDataAdapter da)
+    {
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        return dt;
+    }
+    
+}

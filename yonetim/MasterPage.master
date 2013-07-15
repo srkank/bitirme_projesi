@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="yonetim_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="yonetici.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 47px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+      
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <table class="style1">
+                    <tr>
+                        <td class="style2">
+                            <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" 
+                                DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                                ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                                <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <DynamicMenuStyle BackColor="#F7F6F3" />
+                                <DynamicSelectedStyle BackColor="#5D7B9D" />
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/kullaniciislemleri.aspx" 
+                                        Text="Kullanıcı İşlemleri" Value="Kullanıcı İşlemleri"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/kategoriler.aspx" 
+                                        Text="Kategori İşlemleri" Value="Kategori İşlemleri"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/Urunler.aspx" Text="Ürün İşlemleri" 
+                                        Value="Ürün İşlemleri"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/urunlist.aspx" Text="Ürün Listesi" 
+                                        Value="Ürün Listesi"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/siparisler.aspx" Text="Siparişler" 
+                                        Value="Siparişler"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/yonetim/guven_deger.aspx" Text="guven_deger" 
+                                        Value="guven_deger"></asp:MenuItem>
+                                </Items>
+                                <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                <StaticSelectedStyle BackColor="#5D7B9D" />
+                            </asp:Menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+      
+    </div>
+    </form>
+</body>
+</html>

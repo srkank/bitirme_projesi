@@ -1,0 +1,269 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="tema1.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+    
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 198px;
+        }
+        .style3
+        {
+            width: 180px;
+            height: 200px;
+        }
+        .style6
+        {
+            height: 102px;
+        }
+        .style7
+        {
+        }
+        .style8
+        {
+            width: 1px;
+        }
+        .style9
+        {
+            width: 178px;
+        }
+        .style10
+        {
+            width: 33px;
+        }
+        .style11
+        {
+            width: 3px;
+        }
+        .style13
+        {
+            width: 116px;
+        }
+        .style14
+        {
+            width: 90px;
+        }
+        .style15
+        {
+            width: 102px;
+        }
+        .style16
+        {
+            width: 100px;
+        }
+        .style17
+        {
+            width: 197px;
+        }
+        .style19
+        {
+        }
+        .style20
+        {
+            width: 101px;
+        }
+        .style21
+        {
+            width: 120px;
+        }
+        </style>
+    <script language="JavaScript1.2" type="text/javascript">
+<!--
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n); return x;
+        }
+        /* Functions that swaps images. */
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
+
+        /* Functions that handle preload. */
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; } 
+            }
+        }
+
+//-->
+</script>
+</head>
+<body onload="MM_preloadImages('img/ilet.png','img/hakkimiz.png','img/sss.png','img/ana.png');">
+<center>
+    <form id="form1" runat="server">
+    <div>
+        <table class=main>
+            <tr>
+                <td valign="top">
+                    <table class="style1">
+                        <tr>
+                            <td class="style2" rowspan="3">
+                                <img alt="" class="style3" src="img/logo.png" /></td>
+                            <td class=menutb valign=top align=right>
+                                <table style="display: inline-table;" border="0" cellpadding="0" cellspacing="0" width="330">
+<!-- fwtable fwsrc="Adsız" fwpage="Sayfa 1" fwbase="menua.png" fwstyle="Dreamweaver" fwdocid = "1758294342" fwnested="0" -->
+  <tr><!-- row 1 -->
+   <td><a href="default.aspx" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('iletd','','img/ilet.png',1);"><img name="iletd" src="img/iletd.png" width="73" height="16" border="0" id="iletd" alt="" /></a></td>
+   <td><a href="hakkimizda.aspx" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('hakkimizd','','img/hakkimiz.png',1);"><img name="hakkimizd" src="img/hakkimizd.png" width="79" height="16" border="0" id="hakkimizd" alt="" /></a></td>
+   <td><a href="sss.aspx" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('sssd','','img/sss.png',1);"><img name="sssd" src="img/sssd.png" width="111" height="16" border="0" id="sssd" alt="" /></a></td>
+   <td><a href="iletisim.aspx" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('anad','','img/ana.png',1);"><img name="anad" src="img/anad.png" width="67" height="16" border="0" id="anad" alt="" /></a></td>
+  </tr>
+<!--   This table was automatically created with Adobe Fireworks   -->
+<!--   http://www.adobe.com   -->
+</table></td>
+                        </tr>
+                        <tr>
+                            <td class="style6" valign="top">
+                                <asp:MultiView ID="MultiView1" runat="server">
+                                    <asp:View ID="View1" runat="server">
+                                        <table class="style1">
+                                            <tr>
+                                                <td class="style15">
+                                                    Mail Adresiniz</td>
+                                                <td class="style8">
+                                                    :</td>
+                                                <td class="style9">
+                                                    <asp:TextBox ID="txtKullanici" runat="server" Width="200px"></asp:TextBox>
+                                                </td>
+                                                <td class="style10">
+                                                    Şifre</td>
+                                                <td class="style11">
+                                                    :</td>
+                                                <td class="style13">
+                                                    <asp:TextBox ID="txtSifre" runat="server" TextMode="Password" Width="120px"></asp:TextBox>
+                                                </td>
+                                                <td class="style14" valign="top">
+                                                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/img/giris.png" 
+                                                        onclick="ImageButton1_Click" />
+                                                    &nbsp;</td>
+                                                <td valign="top" class="style16">
+                                                    &nbsp;</td>
+                                                <td valign="top">
+                                                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/yeniuye.aspx">Yeni Kayıt</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="style7" colspan="8">
+                                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                                                        ControlToValidate="txtKullanici" ErrorMessage="Mail Adresinizi Düzeltin" 
+                                                        style="font-weight: 700; color: #FF0000" 
+                                                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                                                        ValidationGroup="m"></asp:RegularExpressionValidator>
+                                                    &nbsp;<asp:Label ID="lblSonuc" runat="server" 
+                                                        style="font-weight: 700; color: #FF0000"></asp:Label>
+                                                </td>
+                                                <td class="style7">
+                                                    &nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </asp:View>
+                                    <asp:View ID="View2" runat="server">
+                                        &nbsp;<table class="style1">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                                                    &nbsp;&nbsp;
+                                                    <asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click">Güvenli Çıkış</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="style20">
+                                                    Sipariş Sorgula</td>
+                                                <td class="style21">
+                                                    <asp:TextBox ID="TextBox1" runat="server" ontextchanged="TextBox1_TextChanged"></asp:TextBox>
+                                                </td>
+                                                <td>
+                                                    <asp:LinkButton ID="LinkButton5" runat="server" onclick="LinkButton5_Click">Sipariş Sorgula</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="style19" colspan="3">
+                                                    <asp:Label ID="Label2" runat="server" style="font-weight: 700; color: #CC0066"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </asp:View>
+                                </asp:MultiView>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="style1">
+                                    <tr>
+                                       
+                                        <td style="padding-left:0px">
+                                            <asp:Image ID="Image1" runat="server" Height="60px" ImageUrl="~/img/banner.png" 
+                                                Width="650px" />
+                                        </td>
+                                         <td style="padding:20px">
+                                         <a href="sepetiniz.aspx">
+                                             <asp:Image ID="img_basket" runat="server" ImageUrl="~/img/basket_ust.png" 
+                                                 BorderStyle="None" BorderWidth="0px" />
+                                             <br />
+                                            <asp:LinkButton ID="LinkButton4" runat="server" onclick="LinkButton4_Click" >Sepetiniz</asp:LinkButton></a>
+                                             </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="style1">
+                        <tr>
+                            <td class="style17" valign="top">
+                                <b>KATEGORİLER</b>
+                                <br />
+                                <br />
+                                <asp:DataList ID="DataList1" runat="server" DataKeyField="ID" 
+                                    DataSourceID="AccessDataSource1" 
+                                    style="font-weight: 700">
+                                    <ItemTemplate>
+                                    <div style="height:20px"><a href='kategori.aspx?ID=<%#Eval("ID") %>&KAT=<%#Eval("kategori") %>'>
+                                        <asp:Label  ID="kategoriLabel" runat="server" Text='<%# Eval("kategori") %>' Width="180" /></a></div>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                                <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
+                                    DataFile="~/App_Data/db.mdb" SelectCommand="SELECT * FROM [kategoriler]">
+                                </asp:AccessDataSource>
+                            </td>
+                            <td valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style17">
+                                &nbsp;</td>
+                            <td> 
+                                
+                            </td>
+                            </tr>                       </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form></center>
+</body>
+</html>
